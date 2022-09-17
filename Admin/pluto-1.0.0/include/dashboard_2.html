@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>ADMIN|UBoiGhar</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="css/color_2.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="css/custom.css" />
+      <script src="https://kit.fontawesome.com/496c26838e.js" crossorigin="anonymous"></script>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+
+
+      <style>
+
+html {
+  background: #282828;
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.clock {
+  width: 30rem;
+  height: 30rem;
+  border: 7px solid #282828;
+  box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                inset 4px 4px 10px rgba(0,0,0,0.5),
+                inset -4px -4px 10px rgba(67,67,67,0.5),
+                4px 4px 10px rgba(0,0,0,0.3);
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+ 
+}
+
+.outer-clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #282828;
+  
+ 
+  overflow: hidden;
+}
+
+.outer-clock-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+
+.outer-clock-face::before,
+.outer-clock-face::after,
+.outer-clock-face .marking{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #1df52f;
+  z-index: 0;
+  left: 49%;
+}
+
+.outer-clock-face .marking {
+  background: #bdbdcb;
+  width: 3px;
+}
+
+.outer-clock-face .marking.marking-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  transform: rotate(30deg)
+}
+
+.outer-clock-face .marking.marking-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  transform: rotate(60deg)
+}
+
+.outer-clock-face .marking.marking-three {
+  -webkit-transform: rotate(120deg);
+  -moz-transform: rotate(120deg);
+  transform: rotate(120deg)
+}
+
+.outer-clock-face .marking.marking-four {
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  transform: rotate(150deg)
+}
+
+.inner-clock-face {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: #282828;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.inner-clock-face::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #4d4b63;
+  z-index: 11;
+}
+
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #61afff;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+  width: 30%;
+  z-index: 3;
+}
+
+.hand.min-hand {
+  height: 3px;
+  z-index: 10;
+  width: 40%;
+}
+
+.hand.second-hand {
+  background: #ee791a;
+  width: 45%;
+  height: 2px;
+}
+      </style>
+   </head>
+   <body class="dashboard dashboard_2">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+ 
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="images/layout_img/nadim.JPG" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>Nadim Bhuiyan</h6>
+                           <p><span class="online_animation"></span> Online</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>Welcome Admin Pannel</h4>
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-dashboard yellow_color"></i> <span>Dashboard</span></a>
+                        <ul class="collapse list-unstyled" id="dashboard">
+                           <li>
+                              <a href="dashboard.html">> <span>Default Dashboard</span></a>
+                           </li>
+                           <li>
+                              <a href="dashboard_2.html">> <span>Dashboard style 2</span></a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li><a href="widgets.html"><i class="fa-solid fa-user-group orange_color"></i> <span>All Admin User</span></a></li>
+                     <li> 
+                        <a href="#element" data-toggle="collapse" aria-expanded="false"><i class="fa-solid fa-users purple_color"></i> <span>All User</span></a>  
+                        
+                     </li>
+                     <li><a href="tables.html"><i class="fa-solid fa-table-list purple_color2"></i> <span>All Order List</span></a></li>  
+                     <li>
+                     <li><a href="banner.php"><i class="fa-solid fa-table-list purple_color2"></i> <span>Banner</span></a></li>  
+                     <li>
+                     <li><a href="tables.html"><i class="fa-brands fa-first-order purple_color2"></i> <span>Order Accept Request</span></a></li>   
+                     <li>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-object-group blue2_color"></i> <span>Book Categhory</span></a>
+                        <ul class="collapse list-unstyled" id="apps">
+                           <li><a href="email.html">> <span>Best Sell</span></a></li>
+                           <li><a href="calendar.html">> <span>New Collection</span></a></li>
+                           <li><a href="media_gallery.html">> <span>Old Book</span></a></li>
+                           <li><a href="media_gallery.html">> <span>Donate Book</span></a></li>
+                        </ul>
+                     </li>
+                     <li><a href="price.html"><i class="fa-solid fa-circle-dot blue1_color"></i> <span>Donate Book Request</span></a></li>  
+                     <li>
+                        <a href="contact.html">
+                        <i class="fa-solid fa-book red_color"></i> <span>Requested Books</span></a>
+                     </li>  
+                     <li>
+                        <a href="contact.html">
+                        <i class="fa-solid fa-calendar-check red_color"></i> <span>Events</span></a>
+                     </li> 
+                     <li>
+                        <a href="contact.html">
+                        <i class="fa-solid fa-envelope red_color"></i> <span>Message Box</span></a>
+                     </li>   
+                     <li>
+                        <a href="contact.html">
+                        <i class="fa-solid fa-circle-question red_color"></i> <span>View FQA</span></a>
+                     </li>     
+                      
+                
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="logo_section">
+                           <a href="index.html"><img class="img-responsive" src="images/logo/uboighar.png" alt="#" /></a>
+                        </div>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul>
+                                 <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                 <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                              </ul>
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="images/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="profile.html">My Profile</a>
+                                       <a class="dropdown-item" href="settings.html">Settings</a>
+                                       <a class="dropdown-item" href="help.html">Help</a>
+                                       <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Dashboard</h2>
+                           </div>
+                        </div>
+                     </div>
+                   
+               <!-- end dashboard inner -->
+               <div class="d-flex justify-content-between">
+                    <div class="card col-3 mr-3 bg-info ">
+                      <h5 class="text-center border mt-2 ">Total User<i class="fa-solid fa-users ml-5 m-2" style="font-size:20px;"></i></h5>
+                      <h1 class="text-center mb-2 mt-2">100</h1>
+                    </div>
+                    <div class="card col-3 mr-3 bg-primary">
+                     <h5 class="text-center   border mt-2">Total Requested<i class="fa-solid fa-book m-2" style="font-size:20px;"></i></h5>
+                     <h1 class="text-center mb-2 mt-2">300</h1>
+                    </div>
+                    <div class="card col-3 mr-3 bg-warning">
+                     <h5 class="text-center border mt-2">Total Sell Book<i class="fa-solid fa-book m-2 " style="font-size:20px;"></i></h5>
+                     <h1 class="text-center mb-2 mt-2">400</h1>
+                    </div>
+                    <div class="card col-3 bg-success">
+                     <h5 class="text-center border mt-2">Total Donate Book<i class="fa-solid fa-book m-2" style="font-size:20px;"></i></h5>
+                     <h1 class="text-center mb-2 mt-2">200</h1>
+                    </div>
+               </div>
+               <div class="clock">
+                  <div class="outer-clock-face">
+                    <div class="marking marking-one"></div>
+                    <div class="marking marking-two"></div>
+                    <div class="marking marking-three"></div>
+                    <div class="marking marking-four"></div>
+                    <div class="inner-clock-face">
+                      <div class="hand hour-hand"></div>
+                      <div class="hand min-hand"></div>
+                      <div class="hand second-hand"></div>
+                    </div>
+                  </div>
+                </div>
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <script>
+           
+           const secondHand = document.querySelector('.second-hand');
+          const minsHand = document.querySelector('.min-hand');
+          const hourHand = document.querySelector('.hour-hand');
+          
+          function setDate() {
+            const now = new Date();
+          
+            const seconds = now.getSeconds();
+            const secondsDegrees = ((seconds / 60) * 360) + 90;
+            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+          
+            const mins = now.getMinutes();
+            const minsDegrees = ((mins / 60) * 360) + ((seconds/60)*6) + 90;
+            minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+          
+            const hour = now.getHours();
+            const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
+            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+          }
+          
+          setInterval(setDate, 1000);
+          
+          setDate();
+            </script>
+
+
+<!-- bar chart -->
+<script>
+  var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
+</script>
+<!-- /bar chart -->
+            </div>
+         </div>
+      </div>
+  
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script>
+      <!-- select country -->
+      <script src="js/bootstrap-select.js"></script>
+      <!-- owl carousel -->
+      <script src="js/owl.carousel.js"></script> 
+      <!-- chart js -->
+      <script src="js/Chart.min.js"></script>
+      <script src="js/Chart.bundle.min.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/analyser.js"></script>
+      <!-- nice scrollbar -->
+      <script src="js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="js/custom.js"></script>
+      <script src="js/chart_custom_style2.js"></script>
+      <script>src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"</script>
+   </body>
+</html>
